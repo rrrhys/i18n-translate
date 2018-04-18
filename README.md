@@ -4,6 +4,7 @@ Forked from [thomasbrueggemann/i18n-translate](https://github.com/thomasbrueggem
 
 
 Automatically translates react i18n javascript files into different languages via Google Translate API.
+Helps automatically translate all your i18n keys when used in conjunction with "react-native-i18n"
 
 ## Installation
 
