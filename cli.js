@@ -52,9 +52,12 @@ translate.run(apiKey, startDir, sourceLang, targetLang, fileFilter, function(err
 	console.log("\nThese paths are left untranslated:\n");
 
 	for (var i in merged)  {
-		console.log("File: " + merged[i]["target"] + "/" + merged[i]["file"]);
-		console.log("Path: " + merged[i]["path"][0]);
-		console.log("-----------------------------------");
+		if(merged[i] && merged[i]["source"] !== merged[i]["target"]){
+			console.log("File: " + merged[i]["target"] + "/" + merged[i]["file"]);
+			console.log("Path: " + merged[i]["path"][0]);
+			console.log("-----------------------------------");
+		}
+
 	}
 
 	process.exit(0);
