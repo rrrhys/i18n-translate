@@ -61,8 +61,8 @@ var run = function(apiKey, dir, sourceLanguage, languages, fileFilter, finish) {
 
 			// replace define braces
 			data = data.toString();
-			data = data.replace("define({", "{");
-			data = data.replace("});", "}");
+			data = data.replace("export default {", "{");
+			 data = data.replace("};", "}");
 
 			// try to parse remainder to JSON
 			var parsed;
@@ -142,7 +142,7 @@ var run = function(apiKey, dir, sourceLanguage, languages, fileFilter, finish) {
 						// write translated targets to files
 						for (var t in targets) {
 							var transStr = JSON.stringify(targets[t].value, null, "\t");
-							transStr = "define(" + transStr + ");";
+							transStr = "export default " + transStr + ";";
 
 							var p = dir + t + "/" + file;
 							fs.writeFileSync(p, transStr);
@@ -153,7 +153,7 @@ var run = function(apiKey, dir, sourceLanguage, languages, fileFilter, finish) {
 
 						// prepare a new source file with appended languages
 						var transStr = JSON.stringify(parsed, null, "\t");
-						transStr = "define(" + transStr + ");";
+						transStr = "export default " + transStr + ";";
 
 						var p = dir + file;
 						fs.writeFileSync(p, transStr);
