@@ -1,4 +1,4 @@
-# i18n-translate [![Build Status](https://travis-ci.org/thomasbrueggemann/i18n-translate.svg)](https://travis-ci.org/tomaszbrue/i18n-translate) [![npm](https://img.shields.io/badge/npm-1.0.8-blue.svg)](https://www.npmjs.com/package/i18n-translate
+# i18n-translate React Edition
 
 Forked from [thomasbrueggemann/i18n-translate](https://github.com/thomasbrueggemann/i18n-translate)
 
